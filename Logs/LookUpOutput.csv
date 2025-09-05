@@ -1,0 +1,3 @@
+﻿Scenarios,Select Restaurant,Select Channel Type,Select Service Type,Entity,Sub-Entity ID,Reason For Exclusion,Active,Status
+Delivery 1,All,Menulog,Delivery,Product,Select all OLD Products,Dont show old products on Menulog,,Lookup Found.
+Delivery 2,All,Menulog,Delivery,Item,Select all OLD Items,Dont show old items on Menulog,,Lookup Found.
