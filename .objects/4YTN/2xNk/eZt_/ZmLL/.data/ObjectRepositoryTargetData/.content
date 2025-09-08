@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="UwC3hXx-lkuGP7yxaxNubA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat-kfc-au-admin.cognizantorderservnxtgen.com/ProductExclusionAdvance" DesignTimeRectangle="37, 522, 206, 62" ElementType="ListItem" FullSelectorArgument="&lt;webctrl tag='LI' class='list-unstyled sub-menu position-relative' innertext='Product Exclusion Lookup Advanced' /&gt;" Guid="838be722-4ccd-454c-955e-03539cb493c7" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Product Exclusion-KFC-Australia-Admin' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="ef457269696e9b70d9f7372b7e6ce1c6.png" xmlns="">0NlFNwhxaH0a4by6kywGJOg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome Product Exclusion-KFC-Australia-Admin(",
+  "Type": "App",
+  "Id": "4YTNOhLrwk2EuVcxtUqvbA",
+  "Reference": "mEDzMWy4KESA-HIzYnwmGQ/4YTNOhLrwk2EuVcxtUqvbA",
+  "Created": "2025-09-06T13:33:22.770374Z",
+  "Updated": "2025-09-06T13:33:22.770374Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.8.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

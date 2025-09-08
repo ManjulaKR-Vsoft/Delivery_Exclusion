@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="znQyluVL2Eeg7DCX47U4LA" Reference="mEDzMWy4KESA-HIzYnwmGQ/pkIpee4ujEO27zdsJhwg1Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat-kfc-au-admin.cognizantorderservnxtgen.com" DesignTimeRectangle="43, 532, 167, 42" ElementType="ListItem" FullSelectorArgument="&lt;webctrl aaname='Product Exclusion Lookup Advanced' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Product Exclusion Lookup Advanced' tag='A' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:text='Product Exclusion Lookup Advanced' /&gt;" Guid="24aac4a3-a4eb-47d5-a2f9-66e6d2c31023" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Executive Summary-KFC-Australia-Admin' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="2217b0d0-1601-45f5-8043-2dfcdaa21407" CvTextArea="42, 495, 183, 14" CvTextArgument="Product Exclusion Advanced" CvType="Text" DesignTimeRectangle="43, 494, 183, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Product Exclusion Advanced' tag='A' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Product Exclusion Advanced' /&gt;" Guid="29cd51ae-e0dd-4bc1-9d29-2341b7a331cf" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="8cf6ba55d9f783cde2b412e8141a4761.png" xmlns="">0Y3aJmiM7c0K6mU70F42Utw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

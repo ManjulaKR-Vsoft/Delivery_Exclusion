@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="R1ikHHtuDEeLYtOU2M7Bzg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat-kfc-au-admin.cognizantorderservnxtgen.com/ProductExclusionAdvance" CVScreenId="6e3c19a6-041f-4cb2-8ecb-caba7f1cf6f8" CvElementArea="19, 118, 37, 34" CvType="Icon" DesignTimeRectangle="25, 124, 25, 22" ElementType="Icon" FullSelectorArgument="&lt;webctrl tag='path' /&gt;" Guid="74c1f877-a674-4d67-b872-a50237b46ac2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB0AAAAaCAYAAABLlle3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACFSURBVEhL7dYrDgAhDIThvTVBkYDEYTgAl+IMGGxd163pyOEhVnxukt9U9BER3e2LjjG0976UiaaU1Dm3lImiEdsd0dYaHLKEEGx0pz+61NloKQVeHZOJohHbHdEYIxwymehOf3Sps9FaK7w4Fu+9jaIh2x3RnDMcMpnonBO+jUwmuo/oC3I+qPFMOw9IAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Product Exclusion-KFC-Australia-Admin' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="3aa041beb7661a9880d6f4c1fe5684f0.png" xmlns="">0OlEgiiZ4u02G0Z44HqVSog</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

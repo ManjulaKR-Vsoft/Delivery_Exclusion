@@ -167,7 +167,7 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DeliveryExclusion" sap:VirtualizedContainerService.HintSize="1756,6899" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DeliveryExclusion" sap:VirtualizedContainerService.HintSize="1756,12366" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="SharePointURL" />
       <Variable x:TypeArguments="umfm:O365DriveRemoteItem[]" Name="ExclusionList" />
@@ -228,10 +228,10 @@
         <InArgument x:TypeArguments="x:String">["Logs\Delivery_Logs_"+DateTime.Now.ToString("ddMMyyyy_HHmmss")+".xlsx"]</InArgument>
       </Assign.Value>
     </Assign>
-    <Sequence DisplayName="Get Assets" sap:VirtualizedContainerService.HintSize="1756,57" sap2010:WorkflowViewState.IdRef="Sequence_201">
+    <Sequence DisplayName="Get Assets" sap:VirtualizedContainerService.HintSize="1756,792" sap2010:WorkflowViewState.IdRef="Sequence_201">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -240,7 +240,7 @@
           <OutArgument x:TypeArguments="x:String">[SharePointURL]</OutArgument>
         </ui:GetRobotAsset.Value>
       </ui:GetRobotAsset>
-      <umaf:GetFileListConnections AllColumns="{x:Array Type=umsm:Office365SharepointListColumnSlim}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" DynamicMetadataFilter="{x:Null}" Filter="{x:Null}" FreeTextFilter="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" MetadataFilter="{x:Null}" QueryFilter="{x:Null}" SharepointLibraryItemFriendlyName="{x:Null}" SharepointListId="{x:Null}" SharepointSiteUrl="{x:Null}" SimpleSearch="{x:Null}" AuthScopesInvalid="False" ConnectionId="895f9e23-cc61-43c3-b83c-03bd06a2d701" DisplayName="Get File or Folder List" sap:VirtualizedContainerService.HintSize="416,184" sap2010:WorkflowViewState.IdRef="GetFileListConnections_1" IncludeSubfolders="False" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[SharePointURL]" MaxResults="200" Result="[ExclusionList]" SearchMode="UseSimple" TrimDuplicates="False" UseConnectionService="True" WhatToReturn="Files" WorkingWithDocumentLibrary="False">
+      <umaf:GetFileListConnections AllColumns="{x:Array Type=umsm:Office365SharepointListColumnSlim}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" DynamicMetadataFilter="{x:Null}" Filter="{x:Null}" FreeTextFilter="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" MetadataFilter="{x:Null}" QueryFilter="{x:Null}" SharepointLibraryItemFriendlyName="{x:Null}" SharepointListId="{x:Null}" SharepointSiteUrl="{x:Null}" SimpleSearch="{x:Null}" AuthScopesInvalid="False" ConnectionId="ad20fb3b-3e16-4e96-9b12-8e15cc2f0730" DisplayName="Get File or Folder List" sap:VirtualizedContainerService.HintSize="416,184" sap2010:WorkflowViewState.IdRef="GetFileListConnections_1" IncludeSubfolders="False" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[SharePointURL]" MaxResults="200" Result="[ExclusionList]" SearchMode="UseSimple" TrimDuplicates="False" UseConnectionService="True" WhatToReturn="Files" WorkingWithDocumentLibrary="False">
         <umaf:GetFileListConnections.DriveItemArgument>
           <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" FullPathHint="{x:Null}" Item="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" ConnectionKey="895f9e23-cc61-43c3-b83c-03bd06a2d701" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[SharePointURL]" ParentFullPathHint="">
             <umafm:DriveItemArgument.ItemIdBackup>
@@ -278,20 +278,20 @@
         </ui:GetRobotAsset.Value>
       </ui:GetRobotAsset>
     </Sequence>
-    <ui:ForEach x:TypeArguments="umfm:O365DriveRemoteItem" CurrentIndex="{x:Null}" DisplayName="For Each currentO365DriveRemoteItem" sap:VirtualizedContainerService.HintSize="1756,57" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[ExclusionList]">
+    <ui:ForEach x:TypeArguments="umfm:O365DriveRemoteItem" CurrentIndex="{x:Null}" DisplayName="For Each currentO365DriveRemoteItem" sap:VirtualizedContainerService.HintSize="1756,2716" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[ExclusionList]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="umfm:O365DriveRemoteItem">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="umfm:O365DriveRemoteItem" Name="currentO365DriveRemoteItem" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="488,1158" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="524,2586" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="454,122" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[currentO365DriveRemoteItem.FullName]" />
-            <If Condition="[currentO365DriveRemoteItem.FullName=&quot;Delivery - Exclusion Logic.xlsx&quot;]" sap:VirtualizedContainerService.HintSize="454,976" sap2010:WorkflowViewState.IdRef="If_1">
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="490,122" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[currentO365DriveRemoteItem.FullName]" />
+            <If Condition="[currentO365DriveRemoteItem.FullName=&quot;Delivery - Exclusion Logic.xlsx&quot;]" sap:VirtualizedContainerService.HintSize="490,2404" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -299,13 +299,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="452,758" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="488,2186" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <umae:ForEachSheetConnections BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ConnectionAccountName="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID6}" Length="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" AuthScopesInvalid="False" ConnectionId="895f9e23-cc61-43c3-b83c-03bd06a2d701" CurrentItemVariableName="CurrentItem" DisplayName="For Each Sheet in Workbook" sap:VirtualizedContainerService.HintSize="418,650" sap2010:WorkflowViewState.IdRef="ForEachSheetConnections_1" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" UseConnectionService="True">
+                  <umae:ForEachSheetConnections BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ConnectionAccountName="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID6}" Length="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" AuthScopesInvalid="False" ConnectionId="ad20fb3b-3e16-4e96-9b12-8e15cc2f0730" CurrentItemVariableName="CurrentItem" DisplayName="For Each Sheet in Workbook" sap:VirtualizedContainerService.HintSize="454,2078" sap2010:WorkflowViewState.IdRef="ForEachSheetConnections_1" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" UseConnectionService="True">
                     <umae:ForEachSheetConnections.Body>
                       <ActivityAction x:TypeArguments="x:String, x:Int32">
                         <ActivityAction.Argument1>
@@ -314,22 +314,22 @@
                         <ActivityAction.Argument2>
                           <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentItemIndex" />
                         </ActivityAction.Argument2>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,458" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="452,1886" sap2010:WorkflowViewState.IdRef="Sequence_29">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,122" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[CurrentItem]" />
-                          <If Condition="[CurrentItem = &quot;Delivery&quot;]" DisplayName="If Delivery" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="If_4">
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="418,122" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[CurrentItem]" />
+                          <If Condition="[CurrentItem = &quot;Delivery&quot;]" DisplayName="If Delivery" sap:VirtualizedContainerService.HintSize="418,714" sap2010:WorkflowViewState.IdRef="If_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,487" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,487" sap2010:WorkflowViewState.IdRef="Sequence_30">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="sd:DataTable" Name="output" />
                                 </Sequence.Variables>
@@ -338,7 +338,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID1}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="895f9e23-cc61-43c3-b83c-03bd06a2d701" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="416,288" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_3" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" Range="[CurrentItem]" RangeMode="Default" ReadAs="Values" Result="[dtScenarios]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
+                                <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID1}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="ad20fb3b-3e16-4e96-9b12-8e15cc2f0730" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="382,288" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_3" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" Range="[CurrentItem]" RangeMode="Default" ReadAs="Values" Result="[dtScenarios]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
                                   <umae:ReadRangeConnections.DriveItemArgument>
                                     <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" FullPathHint="" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" ParentFullPathHint="">
                                       <umafm:DriveItemArgument.ItemIdBackup>
@@ -369,11 +369,11 @@
                                     </umafm:DriveItemArgument>
                                   </umae:ReadRangeConnections.TemplateArgument>
                                 </umae:ReadRangeConnections>
-                                <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[dtScenarios]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="416,139" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Scenarios" WorkbookPath="Inputs\Scenarios.xlsx" />
+                                <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[dtScenarios]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="382,139" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Scenarios" WorkbookPath="Inputs\Scenarios.xlsx" />
                               </Sequence>
                             </If.Then>
                             <If.Else>
-                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,89" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_31">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -382,10 +382,10 @@
                               </Sequence>
                             </If.Else>
                           </If>
-                          <If Condition="[CurrentItem = &quot;NEW items&quot;]" DisplayName="If New Items" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="If_22">
+                          <If Condition="[CurrentItem = &quot;NEW items&quot;]" DisplayName="If New Items" sap:VirtualizedContainerService.HintSize="418,828" sap2010:WorkflowViewState.IdRef="If_22">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -399,7 +399,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID2}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="895f9e23-cc61-43c3-b83c-03bd06a2d701" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="382,288" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_8" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" Range="[CurrentItem]" RangeMode="Default" ReadAs="Values" Result="[dtNewItems]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
+                                <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID2}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="ad20fb3b-3e16-4e96-9b12-8e15cc2f0730" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="382,288" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_8" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" Range="[CurrentItem]" RangeMode="Default" ReadAs="Values" Result="[dtNewItems]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
                                   <umae:ReadRangeConnections.DriveItemArgument>
                                     <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" FullPathHint="" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" ParentFullPathHint="">
                                       <umafm:DriveItemArgument.ItemIdBackup>
@@ -489,7 +489,7 @@
                               </Sequence>
                             </If.Else>
                           </If>
-                          <If Condition="[CurrentItem = &quot;NEW products&quot;]" DisplayName="If New Products" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="If_5">
+                          <If Condition="[CurrentItem = &quot;NEW products&quot;]" DisplayName="If New Products" sap:VirtualizedContainerService.HintSize="418,57" sap2010:WorkflowViewState.IdRef="If_5">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -506,7 +506,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID3}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="895f9e23-cc61-43c3-b83c-03bd06a2d701" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="382,288" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_6" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" Range="[CurrentItem]" RangeMode="Default" ReadAs="Values" Result="[dtNewProducts]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
+                                <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID3}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="ad20fb3b-3e16-4e96-9b12-8e15cc2f0730" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="382,288" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_6" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" Range="[CurrentItem]" RangeMode="Default" ReadAs="Values" Result="[dtNewProducts]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
                                   <umae:ReadRangeConnections.DriveItemArgument>
                                     <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" FullPathHint="" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" ParentFullPathHint="">
                                       <umafm:DriveItemArgument.ItemIdBackup>
@@ -596,7 +596,7 @@
                               </Sequence>
                             </If.Else>
                           </If>
-                          <If Condition="[CurrentItem = &quot;OLD items&quot;]" DisplayName="If OLD Items" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="If_23">
+                          <If Condition="[CurrentItem = &quot;OLD items&quot;]" DisplayName="If OLD Items" sap:VirtualizedContainerService.HintSize="418,57" sap2010:WorkflowViewState.IdRef="If_23">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -613,7 +613,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID4}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="895f9e23-cc61-43c3-b83c-03bd06a2d701" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="382,279" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_9" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" Range="[CurrentItem]" RangeMode="Default" ReadAs="Values" Result="[dtOldItems]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
+                                <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID4}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="ad20fb3b-3e16-4e96-9b12-8e15cc2f0730" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="382,279" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_9" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" Range="[CurrentItem]" RangeMode="Default" ReadAs="Values" Result="[dtOldItems]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
                                   <umae:ReadRangeConnections.DriveItemArgument>
                                     <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" FullPathHint="" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" ParentFullPathHint="">
                                       <umafm:DriveItemArgument.ItemIdBackup>
@@ -656,7 +656,7 @@
                               </Sequence>
                             </If.Else>
                           </If>
-                          <If Condition="[CurrentItem = &quot;OLD products&quot;]" DisplayName="If OLD Products" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="If_6">
+                          <If Condition="[CurrentItem = &quot;OLD products&quot;]" DisplayName="If OLD Products" sap:VirtualizedContainerService.HintSize="418,48" sap2010:WorkflowViewState.IdRef="If_6">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -673,7 +673,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID5}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="895f9e23-cc61-43c3-b83c-03bd06a2d701" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="382,279" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_7" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" Range="[CurrentItem]" RangeMode="Default" ReadAs="Values" Result="[dtOldProducts]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
+                                <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID5}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="ad20fb3b-3e16-4e96-9b12-8e15cc2f0730" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="382,279" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_7" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" Range="[CurrentItem]" RangeMode="Default" ReadAs="Values" Result="[dtOldProducts]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
                                   <umae:ReadRangeConnections.DriveItemArgument>
                                     <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" FullPathHint="" Item="[currentO365DriveRemoteItem]" ItemSelectionMode="UseExisting" ParentFullPathHint="">
                                       <umafm:DriveItemArgument.ItemIdBackup>
@@ -744,7 +744,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </umae:ForEachSheetConnections>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="418,48" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="454,48" sap2010:WorkflowViewState.IdRef="CommentOut_7">
                     <ui:CommentOut.Body>
                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="518,336" sap2010:WorkflowViewState.IdRef="Sequence_91">
                         <sap:WorkflowViewStateService.ViewState>
@@ -793,7 +793,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="452,89" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="488,89" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -807,7 +807,7 @@
       </ui:ForEach.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -869,7 +869,7 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <If Condition="[dtScenarios.RowCount &gt;= 1]" sap:VirtualizedContainerService.HintSize="1756,6306" sap2010:WorkflowViewState.IdRef="If_34">
+    <If Condition="[dtScenarios.RowCount &gt;= 1]" sap:VirtualizedContainerService.HintSize="1756,8379" sap2010:WorkflowViewState.IdRef="If_34">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -877,7 +877,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1754,6088" sap2010:WorkflowViewState.IdRef="Sequence_214">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1754,8161" sap2010:WorkflowViewState.IdRef="Sequence_214">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -5142,7 +5142,7 @@
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Trace" Message="[&quot;Submit failed for scenario: &quot;+Scenario]" />
+                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Submit failed for scenario: &quot;+Scenario]" />
                                                     <ui:InvokeCode ContinueOnError="{x:Null}" Code=" dtLogger.AsEnumerable.Where(Function(r) r(&quot;Scenario&quot;).ToString()= Scenario).ToList().ForEach(Sub(r)&#xA;    r(&quot;Submit Status&quot;) = &quot;Failed&quot;&#xA;End Sub&#xA;)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="434,197" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
                                                       <ui:InvokeCode.Arguments>
                                                         <InArgument x:TypeArguments="x:String" x:Key="Scenario">[Scenario]</InArgument>
@@ -5224,8 +5224,8 @@
                                     </Sequence>
                                   </TryCatch.Finally>
                                 </TryCatch>
-                                <ui:WriteCsvFile AddHeaders="True" DataTable="[dtLogger]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Logs\Delivery_Logs.csv" sap:VirtualizedContainerService.HintSize="1580,186" sap2010:WorkflowViewState.IdRef="WriteCsvFile_2" ShouldQuote="True" />
-                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1580,57" sap2010:WorkflowViewState.IdRef="CommentOut_20">
+                                <ui:WriteCsvFile AddHeaders="True" DataTable="[dtLogger]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Logs\Delivery_Logs.csv" sap:VirtualizedContainerService.HintSize="1024,186" sap2010:WorkflowViewState.IdRef="WriteCsvFile_2" ShouldQuote="True" />
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1024,57" sap2010:WorkflowViewState.IdRef="CommentOut_20">
                                   <ui:CommentOut.Body>
                                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,168" sap2010:WorkflowViewState.IdRef="Sequence_131">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -5243,7 +5243,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:CommentOut>
-                                <Sequence DisplayName="Refresh and Reset" sap:VirtualizedContainerService.HintSize="1580,50" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                                <Sequence DisplayName="Refresh and Reset" sap:VirtualizedContainerService.HintSize="1024,50" sap2010:WorkflowViewState.IdRef="Sequence_77">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -5324,7 +5324,7 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="1682,89" sap2010:WorkflowViewState.IdRef="Sequence_99">
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="1126,89" sap2010:WorkflowViewState.IdRef="Sequence_99">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -5343,14 +5343,15 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ForEachRow>
-          <Sequence DisplayName="Lookup Verification" sap:VirtualizedContainerService.HintSize="1720,1843" sap2010:WorkflowViewState.IdRef="Sequence_240">
+          <Sequence DisplayName="Lookup Verification" sap:VirtualizedContainerService.HintSize="1720,2243" sap2010:WorkflowViewState.IdRef="Sequence_240">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="Assign_67">
+            <Delay Duration="00:02:00" sap:VirtualizedContainerService.HintSize="486,122" sap2010:WorkflowViewState.IdRef="Delay_25" />
+            <Assign sap:VirtualizedContainerService.HintSize="486,114" sap2010:WorkflowViewState.IdRef="Assign_67">
               <Assign.To>
                 <OutArgument x:TypeArguments="sd:DataTable">[dtOutput]</OutArgument>
               </Assign.To>
@@ -5364,7 +5365,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Status" DataTable="[dtOutput]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="454,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1">
+            <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Status" DataTable="[dtOutput]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -5372,7 +5373,26 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:AddDataColumn>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LookupVerification - Invoke Workflow File (LookupVerification.xaml)" sap:VirtualizedContainerService.HintSize="454,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="LookupVerification.xaml">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,339" sap2010:WorkflowViewState.IdRef="CommentOut_49">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,228" sap2010:WorkflowViewState.IdRef="Sequence_255">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LookupVerification - Invoke Workflow File (LookupVerification.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="LookupVerification.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="OrderServerURL">[OrderservePortalURL]</InArgument>
+                      <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dtScenarios">[dtScenarios]</InOutArgument>
+                      <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dtOutput">[dtOutput]</InOutArgument>
+                      <InArgument x:TypeArguments="x:Boolean" x:Key="Retry">False</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LookupVerificationTest - Invoke Workflow File (LookupVerificationTest.xaml)" sap:VirtualizedContainerService.HintSize="486,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="LookupVerificationTest.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="OrderServerURL">[OrderservePortalURL]</InArgument>
                 <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dtScenarios">[dtScenarios]</InOutArgument>
@@ -5380,7 +5400,7 @@
                 <InArgument x:TypeArguments="x:Boolean" x:Key="Retry">False</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:FilterDataTable DataTable="[dtScenarios]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="454,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dtScenarios]" SelectColumnsMode="Remove">
+            <ui:FilterDataTable DataTable="[dtScenarios]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="486,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dtScenarios]" SelectColumnsMode="Remove">
               <ui:FilterDataTable.Filters>
                 <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                   <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -5407,8 +5427,8 @@
                 </scg:List>
               </ui:FilterDataTable.SelectColumns>
             </ui:FilterDataTable>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="454,117" sap2010:WorkflowViewState.IdRef="MessageBox_18" Text="[&quot;After lookup Retry rows count is &quot;+dtScenarios.RowCount.ToString]" />
-            <If Condition="[dtScenarios.RowCount &gt;= 1]" sap:VirtualizedContainerService.HintSize="454,1093" sap2010:WorkflowViewState.IdRef="If_40">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486,173" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info" Message="[&quot;After lookup Retry rows count is &quot;+dtScenarios.RowCount.ToString]" />
+            <If Condition="[dtScenarios.RowCount &gt;= 1]" sap:VirtualizedContainerService.HintSize="454,976" sap2010:WorkflowViewState.IdRef="If_40">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -5416,25 +5436,24 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="452,875" sap2010:WorkflowViewState.IdRef="Sequence_245">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="452,758" sap2010:WorkflowViewState.IdRef="Sequence_245">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtScenarios]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="418,647" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtScenarios]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="418,530" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,467" sap2010:WorkflowViewState.IdRef="Sequence_246">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,350" sap2010:WorkflowViewState.IdRef="Sequence_246">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[CurrentRow(&quot;Scenarios&quot;).ToString]" />
                           <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,122" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[CurrentRow(&quot;Scenarios&quot;).ToString + &quot; is retrying&quot;]" />
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DeliveryExclusionRetry - Invoke Workflow File (DeliveryExclusionRetry.xaml)" sap:VirtualizedContainerService.HintSize="382,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="DeliveryExclusionRetry.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
@@ -5477,32 +5496,32 @@
               </If.Else>
             </If>
           </Sequence>
-          <Sequence DisplayName="Write File and Upload to SharePoint" sap:VirtualizedContainerService.HintSize="1720,48" sap2010:WorkflowViewState.IdRef="Sequence_93">
+          <Sequence DisplayName="Write File and Upload to SharePoint" sap:VirtualizedContainerService.HintSize="1720,1721" sap2010:WorkflowViewState.IdRef="Sequence_93">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[dtLogger.RowCount &gt;= 1]" sap:VirtualizedContainerService.HintSize="470,1638" sap2010:WorkflowViewState.IdRef="If_15">
+            <If Condition="[dtLogger.RowCount &gt;= 1]" sap:VirtualizedContainerService.HintSize="418,1638" sap2010:WorkflowViewState.IdRef="If_15">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,1420" sap2010:WorkflowViewState.IdRef="Sequence_94">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,1420" sap2010:WorkflowViewState.IdRef="Sequence_94">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="SharePoint_Upload_Folder" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Exclusion" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+                  <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="SharePoint_Upload_Folder" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Exclusion" sap:VirtualizedContainerService.HintSize="382,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
                     <ui:GetRobotAsset.Value>
                       <OutArgument x:TypeArguments="x:String">[SharePoint_Upload_Folder]</OutArgument>
                     </ui:GetRobotAsset.Value>
                   </ui:GetRobotAsset>
-                  <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Report_Receivers" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Exclusion" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+                  <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Report_Receivers" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Exclusion" sap:VirtualizedContainerService.HintSize="382,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
                     <ui:GetRobotAsset.Value>
                       <OutArgument x:TypeArguments="x:String">[Report_Receivers]</OutArgument>
                     </ui:GetRobotAsset.Value>
                   </ui:GetRobotAsset>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="CommentOut_46">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="CommentOut_46">
                     <ui:CommentOut.Body>
                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,237" sap2010:WorkflowViewState.IdRef="Sequence_252">
                         <sap:WorkflowViewStateService.ViewState>
@@ -5520,8 +5539,8 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:CommentOut>
-                  <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[dtLogger]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,148" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Exclusion List" WorkbookPath="[Log_Path]" />
-                  <If Condition="[dtOutput.RowCount &gt;=1]" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="If_41">
+                  <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[dtLogger]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="382,148" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Exclusion List" WorkbookPath="[Log_Path]" />
+                  <If Condition="[dtOutput.RowCount &gt;=1]" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="If_41">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -5548,8 +5567,8 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:PathExists DisplayName="Path Exists" Exists="[Log_Path_Exists]" sap:VirtualizedContainerService.HintSize="434,147" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[Log_Path]" PathType="File" Resource="[File_Path]" />
-                  <umaf:UploadFilesConnections AllResults="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FilesList="{x:Null}" FirstResult="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID7}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" Metadata="{x:Null}" SingleFileToUpload="{x:Null}" AuthScopesInvalid="False" ConflictResolution="Replace" ConnectionId="895f9e23-cc61-43c3-b83c-03bd06a2d701" DisplayName="Upload Files" FilesInputMode="MultipleByVariable" sap:VirtualizedContainerService.HintSize="434,235" sap2010:WorkflowViewState.IdRef="UploadFilesConnections_1" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[SharePoint_Upload_Folder]" MultipleFilesToUpload="[{File_Path}]" UseConnectionService="True">
+                  <ui:PathExists DisplayName="Path Exists" Exists="[Log_Path_Exists]" sap:VirtualizedContainerService.HintSize="382,147" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[Log_Path]" PathType="File" Resource="[File_Path]" />
+                  <umaf:UploadFilesConnections AllResults="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FilesList="{x:Null}" FirstResult="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID7}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" Metadata="{x:Null}" SingleFileToUpload="{x:Null}" AuthScopesInvalid="False" ConflictResolution="Replace" ConnectionId="ad20fb3b-3e16-4e96-9b12-8e15cc2f0730" DisplayName="Upload Files" FilesInputMode="MultipleByVariable" sap:VirtualizedContainerService.HintSize="382,235" sap2010:WorkflowViewState.IdRef="UploadFilesConnections_1" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[SharePoint_Upload_Folder]" MultipleFilesToUpload="[{File_Path}]" UseConnectionService="True">
                     <umaf:UploadFilesConnections.DriveItemArgument>
                       <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" FullPathHint="{x:Null}" Item="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" ConnectionKey="895f9e23-cc61-43c3-b83c-03bd06a2d701" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[SharePoint_Upload_Folder]" ParentFullPathHint="">
                         <umafm:DriveItemArgument.ItemIdBackup>
@@ -5576,7 +5595,7 @@
                       </usau:BackupSlot>
                     </umaf:UploadFilesConnections.FilesBackup>
                   </umaf:UploadFilesConnections>
-                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" Email="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AttachmentInputMode="Existing" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;Hi,&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;please check the RPA log for the Delivery Exclusion.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Regards&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;RPA Team&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;/P&gt;&quot;)]" ConnectionMode="LegacyConfiguration" DisplayName="Send SMTP Email" EnableSSL="True" From="AU-KFCRPA@yum.com" sap:VirtualizedContainerService.HintSize="434,366" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Name="RPA Exclusion Automation" Port="25" ResourceAttachments="[{File_Path}]" SecureConnection="None" Server="dalmail.tgr.net" Subject="Delivery - Exclusion RPA Log" To="[Report_Receivers]" UseISConnection="False" UseOAuth="False">
+                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" Email="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AttachmentInputMode="Existing" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;Hi,&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;please check the RPA log for the Delivery Exclusion.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Regards&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;RPA Team&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;/P&gt;&quot;)]" ConnectionMode="LegacyConfiguration" DisplayName="Send SMTP Email" EnableSSL="True" From="AU-KFCRPA@yum.com" sap:VirtualizedContainerService.HintSize="382,366" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Name="RPA Exclusion Automation" Port="25" ResourceAttachments="[{File_Path}]" SecureConnection="None" Server="dalmail.tgr.net" Subject="Delivery - Exclusion RPA Log" To="[Report_Receivers]" UseISConnection="False" UseOAuth="False">
                     <ui:SendMail.AttachmentsBackup>
                       <usau1:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
                         <usau1:BackupSlot.BackupValues>
@@ -5600,7 +5619,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,89" sap2010:WorkflowViewState.IdRef="Sequence_95">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_95">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
