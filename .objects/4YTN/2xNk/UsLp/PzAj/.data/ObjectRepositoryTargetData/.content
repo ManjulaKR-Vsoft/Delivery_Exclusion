@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="rkWqZno-GkOSfT8cfPz8Vw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat-kfc-au-admin.cognizantorderservnxtgen.com/ProductExclusionLookupAdvance" CVScreenId="f8136776-21a1-48c5-a731-663bb8b8b52e" CvType="AnyWordGroup" DesignTimeRectangle="1063, 612, 66, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='root' tag='SPAN' type='' class='sc-ezOQGI sc-bYMpWt iLNKMf kFhGTi' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="bd9f97b3-e1ff-4504-a42a-9bb37b33c898" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Product Exclusion Lookup-KFC-Australia-Admin' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="f8136776-21a1-48c5-a731-663bb8b8b52e" CvTextArea="901, 615, 90, 15" CvTextArgument="Rows per page:" CvType="Text" DesignTimeRectangle="902, 612, 89, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Rows per page:' parentid='root' tag='SPAN' type='' class='sc-ezOQGI sc-kMjNwy iLNKMf buxPnd' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Rows per page:' /&gt;" Guid="cf3a7699-3c2c-4240-811c-7d601c08f984" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="97f85f93a08bca32b8615eaf3ade5b58.png" xmlns="">0RAp6rc_0u0-7mrmQWQY3Kw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
